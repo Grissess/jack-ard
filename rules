@@ -1,0 +1,8 @@
+Pulse.*-left -> alsa_out.*:playback_1
+Pulse.*-right -> alsa_out.*:playback_2
+Milkytracker:Left -> alsa_out.*:playback_1
+Milkytracker:Right -> alsa_out.*:playback_2
+yoshimi:left -> alsa_out.*:playback_1
+yoshimi:right -> alsa_out.*:playback_2
+alsa_in.*:capture_1 -> Pulse.*-left
+alsa_in.*:capture_2 -> Pulse.*-right
