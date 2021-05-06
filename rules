@@ -6,3 +6,9 @@ yoshimi:left -> alsa_out.*:playback_1
 yoshimi:right -> alsa_out.*:playback_2
 alsa_in.*:capture_1 -> Pulse.*-left
 alsa_in.*:capture_2 -> Pulse.*-right
+SuperCollider.*:out_1 -> alsa_out.*:playback_1
+SuperCollider.*:out_2 -> alsa_out.*:playback_2
+alsa_in.*:capture_1 -> Non-Mixer/Ins.*:in-1
+alsa_in.*:capture_2 -> Non-Mixer/Ins.*:in-2
+Pulse.*-left -> Non-Mixer/Apps.*:in-1
+Pulse.*-right -> Non-Mixer/Apps.*:in-2
