@@ -10,5 +10,11 @@ SuperCollider.*:out_1 -> alsa_out.*:playback_1
 SuperCollider.*:out_2 -> alsa_out.*:playback_2
 alsa_in.*:capture_1 -> Non-Mixer/Ins.*:in-1
 alsa_in.*:capture_2 -> Non-Mixer/Ins.*:in-2
-Pulse.*-left -> Non-Mixer/Apps.*:in-1
-Pulse.*-right -> Non-Mixer/Apps.*:in-2
+Pulse.*-left -> Non-Mixer/Apps\.All.*:in-1
+Pulse.*-right -> Non-Mixer/Apps\.All.*:in-2
+Pulse.*Sink:.*-left -> Non-Mixer/Apps\.Main.*:in-1
+Pulse.*Sink:.*-right -> Non-Mixer/Apps\.Main.*:in-2
+Pulse.*Sink-.*:.*-left -> Non-Mixer/Apps\.Alt.*:in-1
+Pulse.*Sink-.*:.*-right -> Non-Mixer/Apps\.Alt.*:in-2
+Non-Mixer/Apps\.Rec.*:out-1 -> Pulse.*-left
+Non-Mixer/Apps\.Rec.*:out-2 -> Pulse.*-right
